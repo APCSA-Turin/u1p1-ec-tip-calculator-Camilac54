@@ -9,16 +9,14 @@ public class ExtraCredit {
     public static String calculateTip(int people, int percent, double cost, String items) {
         StringBuilder result = new StringBuilder();
 
+        //Calculating the tip, total cost, cost per person, tip per person, and the total cost per person
         double tip = cost * (percent / 100.0);
-        
         double totalCost = cost + tip;
-
         double costPerPerson = (cost / people);
-        
         double tipPerPerson = tip / people;
-
         double totalPersonCost = (tipPerPerson + costPerPerson);
 
+        //Printing the results of the calculations and rounding them by using String.format, which cuts off the decimals at the second place value, hence the "%.2f"
         result.append("-------------------------------\n");
         result.append("Total bill before tip: $" + String.format("%.2f", cost) + "\n"); //concatenate to this string. DO NOT ERASE AND REWRITE
         result.append("Total percentage: " + percent + "%" + "\n");
@@ -49,6 +47,7 @@ public class ExtraCredit {
         String menuStop = "";
         String items;
 
+        //I used ! to signify that while it is NOT true 
         while (menuStop != "-1"){ 
             System.out.println("Enter an item name or type '-1' to finish:");
             String itemsPlace = myScanner.nextLine();
