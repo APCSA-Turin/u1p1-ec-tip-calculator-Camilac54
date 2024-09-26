@@ -10,9 +10,9 @@ public class ExtraCredit {
         StringBuilder result = new StringBuilder();
 
         //Calculating the tip, total cost, cost per person, tip per person, and the total cost per person
-        double tip = cost * (percent / 100.0); //Calculates cost by multiplying cost by the decimal version of percent
+        double tip = cost * (percent / 100.0); //Calculates tip by multiplying cost by the decimal version of percent
         double totalCost = cost + tip; // Calculates total cost by adding cost and tip
-        double costPerPerson = (cost / people); // Calculates cost per person by dividing cost by the number of pople there are
+        double costPerPerson = (cost / people); // Calculates cost per person by dividing cost by the number of people there are
         double tipPerPerson = tip / people; // Calculates tip per person by dividing the amount of tip by the number of people there are
         double totalPersonCost = (tipPerPerson + costPerPerson); // Calculates the total cost per person by adding the tip per person and the cost per person
 
