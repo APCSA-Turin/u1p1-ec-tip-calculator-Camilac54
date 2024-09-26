@@ -10,11 +10,11 @@ public class ExtraCredit {
         StringBuilder result = new StringBuilder();
 
         //Calculating the tip, total cost, cost per person, tip per person, and the total cost per person
-        double tip = cost * (percent / 100.0);
-        double totalCost = cost + tip;
-        double costPerPerson = (cost / people);
-        double tipPerPerson = tip / people;
-        double totalPersonCost = (tipPerPerson + costPerPerson);
+        double tip = cost * (percent / 100.0); //Calculates cost by multiplying cost by the decimal version of percent
+        double totalCost = cost + tip; // Calculates total cost by adding cost and tip
+        double costPerPerson = (cost / people); // Calculates cost per person by dividing cost by the number of pople there are
+        double tipPerPerson = tip / people; // Calculates tip per person by dividing the amount of tip by the number of people there are
+        double totalPersonCost = (tipPerPerson + costPerPerson); // Calculates the total cost per person by adding the tip per person and the cost per person
 
         //Printing the results of the calculations and rounding them by using String.format, which cuts off the decimals at the second place value, hence the "%.2f"
         result.append("-------------------------------\n");
@@ -47,15 +47,15 @@ public class ExtraCredit {
         String menuStop = "";
         String items;
 
-        //I used ! to signify that while it is NOT true 
-        while (menuStop != "-1"){ 
+        //While loop in order to add the menu items onto the list 
+        while (menuStop != "-1"){ // I used ! to signify that while it is NOT true 
             System.out.println("Enter an item name or type '-1' to finish:");
             String itemsPlace = myScanner.nextLine();
 
-            if (itemsPlace.equals("-1")){
-                menuStop = "-1";
+            if (itemsPlace.equals("-1")){ // I used an if () statement to identify if the user input is '-1' in order to stop the while loop
+                menuStop = "-1"; 
             } else {
-                itemsList.add(itemsPlace);
+                itemsList.add(itemsPlace); // If the input is idenfitied to not be '-1', the input gets added to the list
             } 
         }
 
